@@ -1,0 +1,71 @@
+@import '../../main-style.scss';
+.note-card-container{
+    background: white;
+    position: relative;
+    border-radius:5px;
+    box-shadow: 0px 2px 15px 2px rgba($color: (black), $alpha: 0.068);
+    transition:box-shadow 0.2s ease-out;
+
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0px 0px 0px 4px rgba($color: (black), $alpha: 0.068);
+        .x-button{
+            opacity:1;
+            transition-delay: 0.35s;
+            transform: scale(1);
+        }
+    }
+
+    .note-card-content{
+        padding: 25px;
+        .note-card-title{
+            font-size: 22px;
+            font-weight: bold;
+            color:$purple;
+
+
+        }
+        .note-card-body{
+            color:#555;
+            position: relative;
+            max-height:80px;
+            overflow: hidden;
+            .fade-out-truncation{
+                position: absolute;
+                pointer-events: none;
+                bottom: 0;
+                height:50%;
+                width: 100%;
+                background:linear-gradient(to bottom,rgba(white,0)0%,rgba(white,0.8)50%,white 100%)
+            }
+        }
+    }
+}
+.x-button{
+position: absolute;
+top:12px;
+right:32px;
+height:34px;
+width: 34px;
+background-color: $blue;
+
+background-image: url('../../assets/deleteicon.png');
+background-size: 37px 33px;
+background-repeat: no-repeat;
+background-position: center;
+border-radius: 4px;
+transition: opacity 0.2s ease-out,transform 0.2s ease-out;
+
+opacity:0;
+transform: scale(0.35);
+&:hover{
+    background-color: darken($blue,3%);
+}
+&:active{
+    background-color: darken($blue,6%);
+}
+}
+
+h1{
+   color:red; 
+}
