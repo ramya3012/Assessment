@@ -10,7 +10,7 @@
         </div>
   </div>
   <div class="notes-list" [@listAnim]>
-      <app-note-card 
+      <app-note-card
       *ngFor="let note of filteredNotes; "
         [link]="generateNoteUrl(note)"
         [@itemAnim]

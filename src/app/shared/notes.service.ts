@@ -25,12 +25,11 @@ export class NotesService {
     let index=newLength - 1;
     return index;
   }
- // update(id:number,title:string,body:string,time:string){
+
     update(id:number,title:string,body:string){
      let note =this.notes[id];
      note.title=title;
      note.body=body;
-    // note.time=time
   }
   delete(id:number){
     this.notes.splice(id,1);

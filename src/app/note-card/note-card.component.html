@@ -1,18 +1,17 @@
-<div #container  class="note-card-container">
+<div #container class="note-card-container">
     <a [routerLink]="link">
-     <div class="note-card-content">
-         <h1 class="note-card-title">{{title }}</h1>
-     
-         <div #bodyText class="note-card-body">
-             <p>{{body}}</p>
-             <div #truncator class="fade-out-truncation"></div>
-             <h1><u><b>Click on the box to edit anywhere</b></u></h1>
-         </div>
+        <div class="note-card-content">
+            <h1 class="note-card-title">{{title}}</h1>
 
-         <!-- <h1 class="note-card-time">{{time }}</h1>
-      -->
-     </div>
+            <div #bodyText class="note-card-body">
+                <p>{{body}}</p>
+                <div #truncator class="fade-out-truncation"></div>
+                <h1><u><b>Click on the box to edit anywhere</b></u></h1>
+            </div>
+
+
+        </div>
     </a>
 
-     <div class="x-button" (click)="onDeleteButtonClick()"></div>
+    <div class="x-button" (click)="onDeleteButtonClick()"></div>
 </div>
